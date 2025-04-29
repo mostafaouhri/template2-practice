@@ -1,0 +1,89 @@
+/* variables */
+:root {
+    --main-color: #37c6ff;
+}
+/* variables */
+
+/* component */
+/* component */
+
+/* global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     background-color: black;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px){
+    .container {
+        width: 750px ;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width: 970px ;
+    }
+}
+@media (min-width:1200px){
+    .container {
+        width: 1170px ;
+    }
+}
+/* global rules */
+header {
+    padding: 23px 17px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+header .container::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    border-bottom: 1px solid white;
+    bottom: -14px;
+    left: 15px;
+}
+header .image {}
+header nav {}
+header nav ul {
+   display: flex;
+   justify-content: center;
+}
+header nav ul li {
+    padding-left: 15px;
+}
+header nav ul li a {
+    color: white
+}
+header nav ul li a.active {
+    color: var(--main-color);
+    position: relative;   
+}
+header i {
+    color :white ;
+}
+/* landing */
+.landing {
+    background-image: url(../images/landing.jpg);
+}
+/* landing */
