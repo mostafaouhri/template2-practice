@@ -12,7 +12,7 @@
 .main-heading {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: -2px;
     position: relative;
     width: fit-content;
@@ -762,6 +762,7 @@ header nav i.toggle-menu {
     line-height: 1.8;
     font-size: 17px;
     text-align: left;
+    flex: 1;
 }
 
 .skills-section .testimonials .content .box span {
@@ -904,12 +905,14 @@ header nav i.toggle-menu {
     text-align: center;
     background-color: #f5deb324;
 }
+
 @media (max-width:991px) {
     .pricing .content .box {
         flex-basis: 50%;
     }
 
 }
+
 @media (max-width:767px) {
     .pricing .content .box {
         flex-basis: 100%;
@@ -954,8 +957,6 @@ header nav i.toggle-menu {
     bottom: 7px;
 }
 
-.pricing .content .box ul {}
-
 .pricing .content .box ul li {
     padding: 20px;
     position: relative;
@@ -982,24 +983,260 @@ header nav i.toggle-menu {
     color: blue;
 }
 
-/* pricing */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.space {
-    height: 100px;
+.pricing .container>p:last-of-type {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 18px;
+    font-family: none;
 }
+
+.pricing .container>button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    background: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Roboto';
+}
+
+/* pricing */
+/* subscribe */
+.subscribe {
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.subscribe .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+@media (max-width :991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+
+.subscribe .section {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+
+.subscribe .section i {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+}
+
+.subscribe .section input[type="email"] {
+    padding: 15px 50px;
+    border: 1px solid white;
+    outline: none;
+    background: transparent;
+    border-right: none;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+}
+
+.subscribe .section input[type="email"]::placeholder {
+    color: white;
+}
+
+.subscribe .section input[type="submit"] {
+    border: 1px solid white;
+    padding: 15px 30px;
+    background: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    border-left: none;
+    width: 130px;
+}
+
+.subscribe p {
+    flex: 1;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+@media (max-width : 991px) {
+    .subscribe p {
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+}
+
+/* subscribe */
+/* contact us */
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact .content {
+    padding-top: var(--section-padding);
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .content .write {
+    flex-basis: 70%;
+    position: relative;
+}
+@media (max-width:767px) {
+    .contact .content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .contact .content .write {
+        order: 2;
+        width: 100%;
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+.contact .content .write input,
+.contact .content .write textarea {
+    outline: none;
+    caret-color: blueviolet;
+    border: 1px solid #ccc;
+}
+
+.contact .content .write input[type="text"] {
+    display: block;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.contact .content .write input[type="email"] {
+    display: block;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.contact .content .write textarea {
+    display: block;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.contact .content .write input[type="submit"] {
+    display: block;
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+}
+
+.contact .content .write input::placeholder,
+.contact .content .write textarea::placeholder {
+    font-size: 17px;
+}
+
+.contact .content .info {
+    flex-basis: 25%;
+}
+
+.contact .content .info {}
+
+.contact .content .info h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.contact .content .info p:last-child {
+    margin-bottom: 60px;
+}
+
+.contact .content .info p,
+.contact .content .info address {
+    line-height: 1.8;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+/* contact us */
+/* Footer */
+.footer{
+    padding-top: calc(var(--section-padding)/2);
+    padding-bottom: calc(var(--section-padding)/2);
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
+    position: relative;
+}
+.footer::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 60%);
+}
+.footer .container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.footer img {
+    margin-bottom: 30px;
+}
+.footer p:first-of-type {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: sans-serif;
+    width: 178px;
+    padding-bottom: 11px;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid white;
+}
+.footer i {
+    padding-left: 20px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.footer p:last-child {
+    font-size: 17px;
+    margin: 60px 0 0;
+}
+.footer p span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* Footer */
